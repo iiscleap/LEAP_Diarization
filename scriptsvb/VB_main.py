@@ -15,8 +15,6 @@
 # limitations under the License.
 
 #
-# Revision History
-#   L. Burget   16/07/13 01:00AM - original version
 
 import numpy as np
 from VB_diarization import VB_diarization, precalculate_VtiEV, frame_labels2posterior_mx
@@ -288,7 +286,6 @@ def generate_rttm(f,mindur,downsamp):
     qold=q
    
     
-# #    # runing with one frame resolution
     q, sp, L ,opt_path= VB_diarization(X, m, iE, w, V,filename,fold_local, sp=sp,q=q, maxSpeakers=maxSpeakers, maxIters=1, VtiEV=VtiEV, \
                                       downsample=downsamp, alphaQInit=100.0, sparsityThr=1e-6, epsilon=1e-6, minDur=mindur, \
                                       loopProb=loopprob,statScale=stat, llScale=1.0, ref=ref, plot=False)
