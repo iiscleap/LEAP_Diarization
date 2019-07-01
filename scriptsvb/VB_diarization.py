@@ -13,12 +13,6 @@
 # limitations under the License.
 
 #
-# Revision History
-#   L. Burget   16/07/13 01:00AM - original version
-#   L. Burget   20/06/17 12:07AM - np.asarray replaced by .toarray()
-#                                - minor bug fix in initializing q
-#                                - minor bug fix in ELBO calculation
-#                                - few more optimizations
 
 import numpy as np
 from scipy.sparse import coo_matrix
