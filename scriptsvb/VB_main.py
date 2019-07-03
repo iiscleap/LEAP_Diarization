@@ -90,7 +90,7 @@ def convert_to_rttm(ind,filename,rttm_newfile):
    
 def compute_score(filename,rttm_gndfile,rttm_newfile,outpath):
   scorecode='score.py -r '
-  cmd='/home/prachis/miniconda3/bin/python '+ fold_local + '/dscore-master/' + scorecode + rttm_gndfile + ' -s ' + rttm_newfile + ' > ' + outpath + '.txt'  
+  cmd='python '+ fold_local + '/dscore-master/' + scorecode + rttm_gndfile + ' -s ' + rttm_newfile + ' > ' + outpath + '.txt'  
   os.system(cmd)
 
  
@@ -195,7 +195,7 @@ def generate_rttm(f,mindur,downsamp):
   feats_file =fold_local + '/../feats/' + dihard_2019+'/'+filename+'.npy'
 
   rttm_gndfile=fold_local+'/../rttm_ground/'+filename+'.rttm'
-  rttm_newfold=fold_local+'/../rttm_generated/{}frame_{}D_downsample_{}_loop_{}_statScale_{}_{}/'.format(mindur,vec_dim,downsamp,loopprob,stat)
+  rttm_newfold=fold_local+'/../rttm_generated/{}frame_{}D_downsample_{}_loop_{}_statScale_{}/'.format(mindur,vec_dim,downsamp,loopprob,stat)
 
   rttm_newfile=rttm_newfold+filename+'.rttm'
 
