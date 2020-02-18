@@ -14,6 +14,7 @@ The posterior scaled VB_diarization is inspired by
 **2.** [dscore](https://github.com/nryant/dscore)
 
 **3.** [DIHARD Baseline ](https://github.com/iiscleap/DIHARD_2019_baseline_alltracks)
+
 **4.** [Kaldi_with_VB](https://github.com/GoVivace/kaldi/tree/VariationalBayes_SpeakerDiarization)
 
 #### Datasets and Models
@@ -30,8 +31,11 @@ git clone https://github.com/iiscleap/LEAP_Diarization.git
 ```
 #### Procedure to train T-matrix
 **1.** Install Kaldi, preferably given in prerequisites
+
 **2.** Change KALDI_ROOT path in path.sh to your kaldi path
+
 **3.** Generate data/train using DIHARD_Baseline (given in prerequisites)
+
 **4.** Run main.sh. It will compute mfccs of training set. Generate diagonal UBM and train T-matrix using diagonal UBM.
 Then it converts the diagonal UBM and T-matrix into pickle dictionary.
 ```bash
@@ -43,7 +47,7 @@ bash main.sh
 ```bash
 cd scriptsvb
 ```
-**3.** Type following command for arguments help. If pretrained models is in h5 format, then make pickle_format=0 in VB_main.py
+**3.** Type following command for arguments help. If pretrained models is in h5 format, then set pickle_format=0 in VB_main.py
 ```bash
 python VB_main.py -h
 ```
