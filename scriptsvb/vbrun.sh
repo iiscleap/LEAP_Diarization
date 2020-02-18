@@ -13,4 +13,4 @@ python VB_main.py \
 --ivec-dim 400 \
 --mindur 1 \
 --downsamp 20 \
---dubmh5 final_vox_dubm_r.h5 --mytvmat tvmat.h5
+--dubmh5 final_vox_dubm_r.pkl --mytvmat tvmat.pkl
